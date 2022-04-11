@@ -1,4 +1,5 @@
 Summary 
+
 Iris flower records or Fischer Iris records are introduced in a 1936 paper, with multiple measurements of taxonomic problems, by the British statistics and 1936 biologists Ronald Fisher Multivariate data set. 
 At the time of time, Edgar Anderson is called IRIS record to quantify the morphological fluctuations of iris flowers of three related species.  Two of the three types were  measured simultaneously with the same meadow, which collected two types of gas peninsula, "in the same device," was measured with the same device. 
  Records consist of 50 samples (IRIS SETOSA, IRIS VIRGINICA, IRIS VERSISTOR) from  three iris species. Measured four features  from each sample: The length and  width of the center head leaves and petals. Based on the combination of these four functions, Fisher has developed a linear identification model to distinguish  species with each other. 
