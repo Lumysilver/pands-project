@@ -7,15 +7,25 @@ At the time of time, Edgar Anderson is called IRIS record to quantify the morpho
 
 
 
-Installing libraries to make the workflow smooth. 
+Installing libraries
 
 References:
+
 1. documenting about the existing data libraries: https://towardsdatascience.com/top-10-python-libraries-for-data-science-cd82294ec266
 2. Different types of 3D libraries for Python: http://brainstormingbox.org/top-python-libraries-for-3d-machine-learning/
 3. Installed Anaconda  
 4. documenting on working with csv files:  https://www.analyticsvidhya.com/blog/2021/08/python-tutorial-working-with-csv-file-for-data-science/
 5. Exploratory data analysis: https://medium.com/@avulurivenkatasaireddy/exploratory-data-analysis-of-iris-data-set-using-python-823e54110d2d
 6. Researching different types of plots: https://www.machinelearningplus.com/plots/top-50-matplotlib-visualizations-the-master-plots-python/
+
+
+
+
+***
+
+PROJECT
+Programing and Scripting
+Due: last commit on before April 29th, 2022.
 
 
 This project concerns the well-known Fisher’s Iris data set [3]. You must research the data set and write documentation and code (in Python [1]) to investigate it. An online search for information on the data set will convince you that many people have investigated it previously. 
@@ -46,3 +56,6 @@ I will correct what is in your pands-project repository (only), So use GitHub to
 It is expected that your repository will have lots of commits, with each commit relating to a reasonably small unit of work.
 
 In the last week of term, or at any other time, you may be asked to explain the contents of your git repository. While it is encouraged that students will engage in peer learning, any unreferenced documentation and software that is contained in your submission must have been written by you. You can show this by having an incremental commit history and by being able to explain your code.
+
+
+***
