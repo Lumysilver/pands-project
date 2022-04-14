@@ -9,7 +9,6 @@ import matplotlib.pyplot as plt
 
 
 #we are going to load the data we have called iris.data using import cvs
-#that loads tha data right into a panda data frame
 #data is called the data frame we have
 
 import csv
