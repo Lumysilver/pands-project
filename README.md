@@ -10,9 +10,12 @@ At the time of time, Edgar Anderson is called IRIS record to quantify the morpho
 Installing libraries to make the workflow smooth. 
 
 References:
-1. documenting useful data libraries: https://towardsdatascience.com/top-10-python-libraries-for-data-science-cd82294ec266
+1. documenting about the existing data libraries: https://towardsdatascience.com/top-10-python-libraries-for-data-science-cd82294ec266
 2. Different types of 3D libraries for Python: http://brainstormingbox.org/top-python-libraries-for-3d-machine-learning/
- 
+3. Installed Anaconda  
+4. documenting on working with csv files:  https://www.analyticsvidhya.com/blog/2021/08/python-tutorial-working-with-csv-file-for-data-science/
+5. Exploratory data analysis: https://medium.com/@avulurivenkatasaireddy/exploratory-data-analysis-of-iris-data-set-using-python-823e54110d2d
+6. Researching different types of plots: https://www.machinelearningplus.com/plots/top-50-matplotlib-visualizations-the-master-plots-python/
 
 
 This project concerns the well-known Fisher’s Iris data set [3]. You must research the data set and write documentation and code (in Python [1]) to investigate it. An online search for information on the data set will convince you that many people have investigated it previously. 
