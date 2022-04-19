@@ -1,13 +1,12 @@
 Summary 
 
-Iris flower records or Fischer Iris records are introduced in a 1936 paper, with multiple measurements of taxonomic problems, by the British statistics and 1936 biologists Ronald Fisher Multivariate data set. 
-At the time of time, Edgar Anderson is called IRIS record to quantify the morphological fluctuations of iris flowers of three related species.  Two of the three types were  measured simultaneously with the same meadow, which collected two types of gas peninsula, "in the same device," was measured with the same device. 
- Records consist of 50 samples (IRIS SETOSA, IRIS VIRGINICA, IRIS VERSISTOR) from  three iris species. Measured four features  from each sample: The length and  width of the center head leaves and petals. Based on the combination of these four functions, Fisher has developed a linear identification model to distinguish  species with each other. 
- Fisher's paper is published in Eugenix year and discusses the application of techniques included in the field of expression. This story suggested that the use of an iris record to teach statistical technologies to teach today's statistics statistics and replace it with less resistive alternatives.
+R.A. Fisher published the first report on the iris data set in the Annals of Human Genetics in 1936. It is a collection of 50 samples collected by the author on each of three Irises species: setosa, versicolor, and virginica. Four attributes of 50 flowers from each of the plants were measured: sepal length, sepal width, petal length, and petal width. According to the author, the lengths and widths of the petal and sepal are features that can be utilized to determine which species they belong to using a linear discriminant model. The linear discriminant model, a statistical, machine learning, and pattern recognition technique used to distinguish between two or more objects, classes, or events, was created by Fischer himself. (Wikipedia, n.d.) 
+Fischer recorded the findings for the three species in a table containing each of the four measurements, followed by tables of observed means, sums of squares, and other statistics to show how each species could be distinguished from the others. Fischer uses sums of squares and products of deviations from each mean to produce a linear function that best distinguishes between the two species. The ANOVA test is a strong statistical method for determining correlations (such as differences) between variables by comparing the means of the variables. (statisticssolutions.com, n.d.)
+
+More about the Iris data set and its outcomes
 
 
 
-Installing libraries
 
 References:
 
@@ -17,6 +16,7 @@ References:
 4. documenting on working with csv files:  https://www.analyticsvidhya.com/blog/2021/08/python-tutorial-working-with-csv-file-for-data-science/
 5. Exploratory data analysis: https://medium.com/@avulurivenkatasaireddy/exploratory-data-analysis-of-iris-data-set-using-python-823e54110d2d
 6. Researching different types of plots: https://www.machinelearningplus.com/plots/top-50-matplotlib-visualizations-the-master-plots-python/
+
 
 
 
