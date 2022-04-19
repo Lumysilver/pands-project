@@ -12,12 +12,16 @@ References:
 
 1. documenting about the existing data libraries: https://towardsdatascience.com/top-10-python-libraries-for-data-science-cd82294ec266
 2. Different types of 3D libraries for Python: http://brainstormingbox.org/top-python-libraries-for-3d-machine-learning/
-3. Installed Anaconda  
+3. Choosing libraries: https://realpython.com/python-statistics/#choosing-python-statistics-libraries
 4. documenting on working with csv files:  https://www.analyticsvidhya.com/blog/2021/08/python-tutorial-working-with-csv-file-for-data-science/
 5. Exploratory data analysis: https://medium.com/@avulurivenkatasaireddy/exploratory-data-analysis-of-iris-data-set-using-python-823e54110d2d
 6. Researching different types of plots: https://www.machinelearningplus.com/plots/top-50-matplotlib-visualizations-the-master-plots-python/
 7. 3D Scatter plot: https://www.kaggle.com/code/imdevskp/plotly-express-3d-scatter-plot-iris-data/notebook
 8. CSV files in data science: https://www.analyticsvidhya.com/blog/2021/08/python-tutorial-working-with-csv-file-for-data-science/
+9. Histograms: https://realpython.com/python-statistics/#histograms
+10. 
+11. 
+
 
 
 
