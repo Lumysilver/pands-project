@@ -16,6 +16,9 @@ References:
 4. documenting on working with csv files:  https://www.analyticsvidhya.com/blog/2021/08/python-tutorial-working-with-csv-file-for-data-science/
 5. Exploratory data analysis: https://medium.com/@avulurivenkatasaireddy/exploratory-data-analysis-of-iris-data-set-using-python-823e54110d2d
 6. Researching different types of plots: https://www.machinelearningplus.com/plots/top-50-matplotlib-visualizations-the-master-plots-python/
+7. 3D Scatter plot: https://www.kaggle.com/code/imdevskp/plotly-express-3d-scatter-plot-iris-data/notebook
+8. CSV files in data science: https://www.analyticsvidhya.com/blog/2021/08/python-tutorial-working-with-csv-file-for-data-science/
+
 
 
 
