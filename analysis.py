@@ -6,69 +6,67 @@
 import pandas as pd #we import pandas library because we are going to work on our scatter plot
 import numpy as np #numpy can execute a variety of mathematical operations on arrays
 import matplotlib.pyplot as plt #matplotlib makes plots/low level graphs
-import seaborn as sns #seaborn is a Matplotlib-based data visualization package
-from sklearn import datasets
+import seaborn as sns #seaborn is a Matplotlib-based data visualization package, I use seaborn library to make colourfull graphs
+
 
 
 #we are going to load the data we have called iris.data.csv using import cvs
 import csv
-file = open("iris.data.csv") #iris.data.csv is called the data frame we have to open
-csvreader = csv.reader(file) #we use the csv.reader to read the csv file
-header = next(csvreader) #we are extracting the field names
-print(header) #we are printing the header
+file = open("iris.data.csv") #iris.data.csv is called the data frame we open
+csvreader = csv.reader(file) #we use the csvreader to read the file iris.data.csv
+header = next(csvreader) #'next' prints what's on a list or data file in order; returns to actual row then moves to the next row
+print(header) #we are printing what is in our file
 
 #now we are extracting the rows
 rows = [] #we are defining an empty row
 for row in csvreader:  #we call the rows 
-    rows.append(row) #extract the rows
-print(rows) #we now print
+    rows.append(row) #we extract the rows
+print(rows) #we print the rows
+
 file.close() #we finish the operation
 
 
-col=['sepal_length','sepal_width','petal_length','petal_width','type']
-iris=pd.read_csv("iris.data.csv",names=col)
+col=['sepal_length','sepal_width','petal_length','petal_width','type'] #col= colums; and we determine how to call what's in those colums 
+iris=pd.read_csv("iris.data.csv",names=col) #here we read the dataset iris.data.csv, 
 
 
 #here we are dividing in 3 parts the class data set
-iris_setosa=iris.loc[iris["type"]=="Iris-setosa"]
-iris_virginica=iris.loc[iris["type"]=="Iris-virginica"]
-iris_versicolor=iris.loc[iris["type"]=="Iris-versicolor"]
+iris_setosa=iris.loc[iris["type"]=="Iris-setosa"] #
+iris_virginica=iris.loc[iris["type"]=="Iris-virginica"] #
+iris_versicolor=iris.loc[iris["type"]=="Iris-versicolor"] #
+
+
+
+#distribution of plots
+
+#below we are displaying the histogram of each type of Iris using the seaborn library: 
+
+#FacetGrid() class distributes a dataset onto several axes
+#shown in the form of a grid of rows/columns indicating the levels of variables in the dataset
+sns.FacetGrid(iris,hue="type",height=5).map(sns.histplot,"petal_length").add_legend() #FacetGrid is used here to distribute data
+
+plt.savefig("petal_lenght.png") #this is the code that saves each variable in our directory, we name the file and select what extension we want
+
+sns.FacetGrid(iris,hue="type",height=5).map(sns.histplot,"petal_width").add_legend() #Hue is used to set a colour of subsets according to the type in our case
+plt.savefig("petal_width.png") #we save as png the histogram
+
+sns.FacetGrid(iris,hue="type",height=5).map(sns.histplot,"sepal_length").add_legend() #with 'height' we determine the size of our histogram
+plt.savefig("sepal_lenght.png") #we save as pngthe histogram
+
+sns.FacetGrid(iris,hue="type",height=5).map(sns.histplot,"sepal_width").add_legend()#histplot is a function that displays the histogram of data
+plt.savefig("sepal_width.png")#we save as png the histogram
+
+plt.show() #function used to show all open figures
+
+
+#below I want to create an input command for each functionality of the program usilg elif method
+#if input(1):
+#print
+    
 
 #Scatter plot output
 
 
+#Violin plot output
 
-#distribution plots
-#below we are displaying the plot of each type of Iris using seaborn library
-def new_func(iris):
-   sns.FacetGrid(iris,hue="type",height=3).map(sns.histplot,"petal_length").add_legend() 
-   sns.FacetGrid(iris,hue="type",height=3).map(sns.histplot,"petal_width").add_legend()
-   sns.FacetGrid(iris,hue="type",height=3).map(sns.histplot,"sepal_length").add_legend()
-   sns.FacetGrid(iris,hue="type",height=3).map(sns.histplot,"sepal_width").add_legend()
-   plt.show()
-
-
-
-#below we have a series of ways to create a plot with violin plot and boxplot for the other type of analysis I will create
-
-#Violin plot example, we plot violin plot of our iris data:
-#sns.violinplot(x="type",y="petal_length",data=iris)
-#plt.show()
-
-#BoxPlot plot display for petal lenght:
-#sns.boxplot(x="type",y="petal_length",data=iris)
-#plt.show()
-
-#BoxPlot plot display for petal width:
-#sns.boxplot(x="type",y="petal_width",data=iris)
-#plt.show()
-
-#BoxPlot plot display for petal lenght:
-#sns.boxplot(x="type",y="sepal_lenght",data=iris)
-#plt.show()
-
-#BoxPlot plot display for petal lenght:
-#sns.boxplot(x="type",y="sepal_width",data=iris)
-    #plt.show()
-
-new_func(iris)
+#Bloxplot output
