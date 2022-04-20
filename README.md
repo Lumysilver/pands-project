@@ -13,14 +13,18 @@ References:
 1. documenting about the existing data libraries: https://towardsdatascience.com/top-10-python-libraries-for-data-science-cd82294ec266
 2. Different types of 3D libraries for Python: http://brainstormingbox.org/top-python-libraries-for-3d-machine-learning/
 3. Choosing libraries: https://realpython.com/python-statistics/#choosing-python-statistics-libraries
+3. Documenting about matplotlib: https://matplotlib.org/3.5.0/api/_as_gen/matplotlib.pyplot.show.html
 4. documenting on working with csv files:  https://www.analyticsvidhya.com/blog/2021/08/python-tutorial-working-with-csv-file-for-data-science/
 5. Exploratory data analysis: https://medium.com/@avulurivenkatasaireddy/exploratory-data-analysis-of-iris-data-set-using-python-823e54110d2d
 6. Researching different types of plots: https://www.machinelearningplus.com/plots/top-50-matplotlib-visualizations-the-master-plots-python/
+7.  https://medium.com/theleanprogrammer/data-visualization-to-our-rescue-b6583f5daac0
 7. 3D Scatter plot: https://www.kaggle.com/code/imdevskp/plotly-express-3d-scatter-plot-iris-data/notebook
-8. CSV files in data science: https://www.analyticsvidhya.com/blog/2021/08/python-tutorial-working-with-csv-file-for-data-science/
+7. Seaborn plot: https://seaborn.pydata.org/generated/seaborn.FacetGrid.html
+8. CSV files: https://www.analyticsvidhya.com/blog/2021/08/python-tutorial-working-with-csv-file-for-data-science/
 9. Histograms: https://realpython.com/python-statistics/#histograms
-10. 
-11. 
+10. Saving a histogram in our computer: https://www.geeksforgeeks.org/how-to-save-a-plot-to-a-file-using-matplotlib/
+11. Scatter polots:  https://www.reneshbedre.com/blog/scatter-plot-matplotlib.html
+
 
 
 
