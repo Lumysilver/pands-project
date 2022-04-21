@@ -2,7 +2,7 @@
 # Download the data set and add it to my repository.
 #Research what data libraries will help me achieve the results I want; 
 
-#importing different libraries
+#importing libraries
 import pandas as pd #we import pandas library because we are going to work on our scatter plot
 import numpy as np #numpy can execute a variety of mathematical operations on arrays
 import matplotlib.pyplot as plt #matplotlib makes plots/low level graphs
@@ -11,23 +11,40 @@ import seaborn as sns #seaborn is a Matplotlib-based data visualization package,
 
 
 #we are going to load the data we have called iris.data.csv using import cvs
-import csv
-file = open("iris.data.csv") #iris.data.csv is called the data frame we open
-csvreader = csv.reader(file) #we use the csvreader to read the file iris.data.csv
-header = next(csvreader) #'next' prints what's on a list or data file in order; returns to actual row then moves to the next row
-print(header) #we are printing what is in our file
+#import csv
+#file = open("iris.data.csv") #iris.data.csv is called the data frame we open
+#csvreader = csv.reader(file) #we use the csvreader to read the file iris.data.csv
+#header = next(csvreader) #'next' prints what's on a list or data file in order; returns to actual row then moves to the next row
+#print(header) #we are printing what is in our file
 
 #now we are extracting the rows
-rows = [] #we are defining an empty row
-for row in csvreader:  #we call the rows 
-    rows.append(row) #we extract the rows
-print(rows) #we print the rows
+#rows = [] #we are defining an empty row
+#for row in csvreader:  #we call the rows 
+# rows.append(row) #we extract the rows
+#print(rows) #we print the rows
 
-file.close() #we finish the operation
+#file.close() #we finish the operation
+
+def menu()
+menu = {} #we are creating a menu
+menu['1']="See the summary of each variable" #inserting options point by point
+menu['2']="See petal lenght histogram"
+menu['3']="See petal width histogram"
+menu['4']="See sepal lenght histogram"
+menu['5']="See sepal width histogram"
+menu['6']="See optional histogram"
+menu['7']="See optional 1 histogram"
+menu['8']="Exit"
+
+
 
 
 col=['sepal_length','sepal_width','petal_length','petal_width','type'] #col= colums; and we determine how to call what's in those colums 
 iris=pd.read_csv("iris.data.csv",names=col) #here we read the dataset iris.data.csv, 
+
+#output a summary of each variable to a text file
+summary_data = {"Purchase Amount": 'TotalAmount'}
+print(summary_data,  file=open('summarydata.txt', 'w'))
 
 
 #here we are dividing in 3 parts the class data set
