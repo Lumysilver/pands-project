@@ -7,7 +7,6 @@ More about the Iris data set and its outcomes
 
 
 
-
 References:
 
 1. documenting about the existing data libraries: https://towardsdatascience.com/top-10-python-libraries-for-data-science-cd82294ec266
@@ -15,6 +14,7 @@ References:
 3. Choosing libraries: https://realpython.com/python-statistics/#choosing-python-statistics-libraries
 3. Documenting about matplotlib: https://matplotlib.org/3.5.0/api/_as_gen/matplotlib.pyplot.show.html
 4. documenting on working with csv files:  https://www.analyticsvidhya.com/blog/2021/08/python-tutorial-working-with-csv-file-for-data-science/
+4. variables to text files:  https://www.adamsmith.haus/python/answers/how-to-write-a-variable-to-a-file-in-python
 5. Exploratory data analysis: https://medium.com/@avulurivenkatasaireddy/exploratory-data-analysis-of-iris-data-set-using-python-823e54110d2d
 6. Researching different types of plots: https://www.machinelearningplus.com/plots/top-50-matplotlib-visualizations-the-master-plots-python/
 7.  https://medium.com/theleanprogrammer/data-visualization-to-our-rescue-b6583f5daac0
