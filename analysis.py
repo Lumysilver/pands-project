@@ -3,11 +3,12 @@
 #Research what data libraries will help me achieve the results I want; 
 
 #importing libraries
+import filecmp
+from tkinter import W
 import pandas as pd #we import pandas library because we are going to work on our scatter plot
 import numpy as np #numpy can execute a variety of mathematical operations on arrays
 import matplotlib.pyplot as plt #matplotlib makes plots/low level graphs
 import seaborn as sns #seaborn is a Matplotlib-based data visualization package, I use seaborn library to make colourfull graphs
-
 
 
 #we are going to load the data we have called iris.data.csv using import cvs
@@ -26,11 +27,58 @@ import seaborn as sns #seaborn is a Matplotlib-based data visualization package,
 #file.close() #we finish the operation
 
 # generated text file function
-def output_summary_txt():
-    col=['sepal_length','sepal_width','petal_length','petal_width','type'] #col= colums; and we determine how to call what's in those colums 
-    iris=pd.read_csv("iris.data.csv",names=col) #here we read the dataset iris.data.csv, 
+
+#def output_summary_txt():
+
+    #col=['sepal_length','sepal_width','petal_length','petal_width','type'] #col= colums; and we determine how to call what's in those colums 
+    #iris=pd.read_csv("iris.data.csv",names=col) #here we read the dataset iris.data.csv, 
 
     #output a summary of each variable to a text file
+
+    #iris types
+    #iris_types = ['Iris-setosa','Iris-versicolor','Iris-virginica']
+
+    #print (min(iris.sepal_width))
+    #setosa = []
+    #versicolor = []
+    #virginica = []
+
+    #for index, row in iris.iterrows():
+        #if row['type'] == 'Iris-setosa':
+            #setosa.append(row)
+        #elif row['type'] == 'Iris-versicolor':
+            #versicolor.append(row)
+        #elif row['type'] == 'Iris-virginica':
+            #virginica.append(row)
+        #else:
+            #print ('======================')
+
+    #print (setosa)
+
+    #print ('Iris-setosa')
+    #print ('======================')
+
+   # print ('Sepal Length MIN: ', setosa)            
+    #print ('Sepal Length MAX')
+           # print ('Sepal Length AVG')
+           # print ('--------------------')
+           # print ('Sepal Width MIN')
+           # print ('Sepal Width MAX')
+           # print ('Sepal Width AvG')
+          #  print ('--------------------')
+           # print ('Petal Length MIN')
+           # print ('Petal Length MAX')
+          #  print ('Petal Length AVG')
+           # print ('--------------------')
+          #  print ('Petal Width MIN')
+           # print ('Petal Width MAX')
+           # print ('Petal Width AVG')
+
+
+
+       #print(index , ' => ',row['type'])
+
+
     summary_data = {"Summary Data": 'TotalAmount'}
     print(summary_data,  file=open('summarydata.txt', 'w'))
 
@@ -77,13 +125,14 @@ option = int(input("Enter your preference: ")) #I am getting the options from us
 while option != 0:
     if option == 1:
         #enter option 1 thats in the menu
-        output_summary_txt()
+        #output_summary_txt()
         pass
     elif option == 2:
         #enter option 2 that's in the menu
         output_histogram()
-    
-    
+    elif option == 3:
+        #enter option 3 that's in the menu
+        print 
     else:
         print('Invalid input')
     print() #we are doing an empty print here
