@@ -9,7 +9,7 @@ import pandas as pd #we import pandas library because we are going to work on ou
 import numpy as np #numpy can execute a variety of mathematical operations on arrays
 import matplotlib.pyplot as plt #matplotlib makes plots/low level graphs
 import seaborn as sns #seaborn is a Matplotlib-based data visualization package, I use seaborn library to make colourfull graphs
-
+import plotly.graph_objects as px #scatter plot library
 
 #we are going to load the data we have called iris.data.csv using import cvs
 #import csv
@@ -28,59 +28,46 @@ import seaborn as sns #seaborn is a Matplotlib-based data visualization package,
 
 # generated text file function
 
-#def output_summary_txt():
+def output_summary_txt():
 
-    #col=['sepal_length','sepal_width','petal_length','petal_width','type'] #col= colums; and we determine how to call what's in those colums 
-    #iris=pd.read_csv("iris.data.csv",names=col) #here we read the dataset iris.data.csv, 
+    # we determine how to call what's in those iris.data.csv colums
+    col = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'type']
 
-    #output a summary of each variable to a text file
+    # here we read the dataset iris.data.csv
+    iris = pd.read_csv("iris.data.csv", names = col) 
 
-    #iris types
-    #iris_types = ['Iris-setosa','Iris-versicolor','Iris-virginica']
+    # create a new variable for each of iris types using groupby and get_group
+    grouped = iris.groupby(iris.type)          #https://www.geeksforgeeks.org/split-pandas-dataframe-by-rows/
+    setosa = grouped.get_group('Iris-setosa')
+    versicolor = grouped.get_group('Iris-versicolor')
+    virginica = grouped.get_group('Iris-virginica')
+    
+    # open or create a new txt file
+    f = open("summarydata.txt", "w")      #https://www.w3schools.com/python/python_file_write.asp
 
-    #print (min(iris.sepal_width))
-    #setosa = []
-    #versicolor = []
-    #virginica = []
+    # Iris-setosa data to be writed in the summary text file
+    f.write('Iris-setosa' + '\n' + '======================' + '\n')
+    f.write('Sepal Length MIN: ' + str(min(setosa.sepal_length)) + '\n' + 'Sepal Length MAX: ' + str(max(setosa.sepal_length)) + '\n' + 'Sepal Length AVG: ' + str(round(setosa.sepal_length.mean(), 2)) + '\n')
+    f.write('Sepal Width MIN: ' + str(min(setosa.sepal_width)) + '\n' + 'Sepal Width MAX: ' + str(max(setosa.sepal_width)) + '\n' + 'Sepal Width AVG: ' + str(round(setosa.sepal_width.mean(), 2)) + '\n')
+    f.write('Petal Length MIN: ' + str(min(setosa.petal_length)) + '\n' + 'Petal Length MAX: ' + str(max(setosa.petal_length)) + '\n' + 'Petal Length AVG: ' + str(round(setosa.petal_length.mean(), 2)) + '\n')
+    f.write('Petal Width MIN: ' + str(min(setosa.petal_width)) + '\n' + 'Petal Width MAX: ' + str(max(setosa.petal_width)) + '\n' + 'Petal Width AVG: ' + str(round(setosa.petal_width.mean(), 2)) + '\n\n\n')
 
-    #for index, row in iris.iterrows():
-        #if row['type'] == 'Iris-setosa':
-            #setosa.append(row)
-        #elif row['type'] == 'Iris-versicolor':
-            #versicolor.append(row)
-        #elif row['type'] == 'Iris-virginica':
-            #virginica.append(row)
-        #else:
-            #print ('======================')
-
-    #print (setosa)
-
-    #print ('Iris-setosa')
-    #print ('======================')
-
-   # print ('Sepal Length MIN: ', setosa)            
-    #print ('Sepal Length MAX')
-           # print ('Sepal Length AVG')
-           # print ('--------------------')
-           # print ('Sepal Width MIN')
-           # print ('Sepal Width MAX')
-           # print ('Sepal Width AvG')
-          #  print ('--------------------')
-           # print ('Petal Length MIN')
-           # print ('Petal Length MAX')
-          #  print ('Petal Length AVG')
-           # print ('--------------------')
-          #  print ('Petal Width MIN')
-           # print ('Petal Width MAX')
-           # print ('Petal Width AVG')
-
-
-
-       #print(index , ' => ',row['type'])
-
-
-    summary_data = {"Summary Data": 'TotalAmount'}
-    print(summary_data,  file=open('summarydata.txt', 'w'))
+    # Iris-versicolor data to be writed in the summary text file
+    f.write('Iris-versicolor' + '\n' + '======================' + '\n')
+    f.write('Sepal Length MIN: ' + str(min(versicolor.sepal_length)) + '\n' + 'Sepal Length MAX: ' + str(max(versicolor.sepal_length)) + '\n' + 'Sepal Length AVG: ' + str(round(versicolor.sepal_length.mean(), 2)) + '\n')
+    f.write('Sepal Width MIN: ' + str(min(versicolor.sepal_width)) + '\n' + 'Sepal Width MAX: ' + str(max(versicolor.sepal_width)) + '\n' + 'Sepal Width AVG: ' + str(round(versicolor.sepal_width.mean(), 2)) + '\n')
+    f.write('Petal Length MIN: ' + str(min(versicolor.petal_length)) + '\n' + 'Petal Length MAX: ' + str(max(versicolor.petal_length)) + '\n' + 'Petal Length AVG: ' + str(round(versicolor.petal_length.mean(), 2)) + '\n')
+    f.write('Petal Width MIN: ' + str(min(versicolor.petal_width)) + '\n' + 'Petal Width MAX: ' + str(max(versicolor.petal_width)) + '\n' + 'Petal Width AVG: ' + str(round(versicolor.petal_width.mean(), 2)) + '\n\n\n')
+    
+    # Iris-virginica data to be writed in the summary text file
+    f.write('Iris-virginica' + '\n' + '======================' + '\n')
+    f.write('Sepal Length MIN: ' + str(min(virginica.sepal_length)) + '\n' + 'Sepal Length MAX: ' + str(max(virginica.sepal_length)) + '\n' + 'Sepal Length AVG: ' + str(round(virginica.sepal_length.mean(), 2)) + '\n')
+    f.write('Sepal Width MIN: ' + str(min(virginica.sepal_width)) + '\n' + 'Sepal Width MAX: ' + str(max(virginica.sepal_width)) + '\n' + 'Sepal Width AVG: ' + str(round(virginica.sepal_width.mean(), 2)) + '\n')
+    f.write('Petal Length MIN: ' + str(min(virginica.petal_length)) + '\n' + 'Petal Length MAX: ' + str(max(virginica.petal_length)) + '\n' + 'Petal Length AVG: ' + str(round(virginica.petal_length.mean(), 2)) + '\n')
+    f.write('Petal Width MIN: ' + str(min(virginica.petal_width)) + '\n' + 'Petal Width MAX: ' + str(max(virginica.petal_width)) + '\n' + 'Petal Width AVG: ' + str(round(virginica.petal_width.mean(), 2)) + '\n\n\n')
+    
+    # close the file
+    f.close()
 
 
 
@@ -111,7 +98,6 @@ def output_histogram():
     plt.show() #function used to show all open figures
 
 
-
 def menu(): 
     print("[1] Save the summary data text")
     print("[2] Save histograms to png files")
@@ -125,7 +111,7 @@ option = int(input("Enter your preference: ")) #I am getting the options from us
 while option != 0:
     if option == 1:
         #enter option 1 thats in the menu
-        #output_summary_txt()
+        output_summary_txt()
         pass
     elif option == 2:
         #enter option 2 that's in the menu
@@ -173,6 +159,8 @@ iris_versicolor=iris.loc[iris["type"]=="Iris-versicolor"] #
 #Scatter plot output
 
 
+
 #Violin plot output
+
 
 #Bloxplot output
