@@ -72,10 +72,8 @@ def output_summary_txt():
 
 
 #Menu option 2
+# define function that will save the summary data txt file - Menu option 2
 def output_histogram():
-    col=['sepal_length','sepal_width','petal_length','petal_width','type'] #col= colums; and we determine how to call what's in those colums 
-    iris=pd.read_csv("iris.data.csv",names=col) #here we read the dataset iris.data.csv, 
-
     #distribution of plots
 
     #below we are displaying the histogram of each type of Iris using the seaborn library: 
@@ -90,12 +88,27 @@ def output_histogram():
     plt.savefig("petal_width.png") #we save as png the histogram
 
     sns.FacetGrid(iris,hue="type",height=5).map(sns.histplot,"sepal_length").add_legend() #with 'height' we determine the size of our histogram
-    plt.savefig("sepal_lenght.png") #we save as pngthe histogram
+    plt.savefig("sepal_lenght.png") #we save as png the histogram
 
     sns.FacetGrid(iris,hue="type",height=5).map(sns.histplot,"sepal_width").add_legend()#histplot is a function that displays the histogram of data
     plt.savefig("sepal_width.png")#we save as png the histogram
 
     plt.show() #function used to show all open figures
+
+
+## define function that will generate the scatter plot - Menu option 3
+def scatter_plot():
+
+ 
+
+
+
+
+
+
+
+
+
 
 
 def menu(): 
@@ -157,7 +170,20 @@ iris_versicolor=iris.loc[iris["type"]=="Iris-versicolor"] #
     
 
 #Scatter plot output
-
+# creating random data through randomint
+# function of numpy.random
+np.random.seed(42)
+ 
+random_x= np.random.randint(1,101,100)
+random_y= np.random.randint(1,101,100)
+ 
+plot = px.Figure(data=[px.Scatter(
+    x = random_x,
+    y = random_y,
+    mode = 'markers',)
+])
+                  
+plot.show()
 
 
 #Violin plot output
