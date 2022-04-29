@@ -3,41 +3,19 @@
 #Research what data libraries will help me achieve the results I want; 
 
 #importing libraries
-import filecmp
-from tkinter import W
 import pandas as pd #we import pandas library because we are going to work on our scatter plot
-import numpy as np #numpy can execute a variety of mathematical operations on arrays
 import matplotlib.pyplot as plt #matplotlib makes plots/low level graphs
 import seaborn as sns #seaborn is a Matplotlib-based data visualization package, I use seaborn library to make colourfull graphs
-import plotly.graph_objects as px #scatter plot library
 
-#we are going to load the data we have called iris.data.csv using import cvs
-#import csv
-#file = open("iris.data.csv") #iris.data.csv is called the data frame we open
-#csvreader = csv.reader(file) #we use the csvreader to read the file iris.data.csv
-#header = next(csvreader) #'next' prints what's on a list or data file in order; returns to actual row then moves to the next row
-#print(header) #we are printing what is in our file
 
-#now we are extracting the rows
-#rows = [] #we are defining an empty row
-#for row in csvreader:  #we call the rows 
-# rows.append(row) #we extract the rows
-#print(rows) #we print the rows
+# we are going to load the data we have called iris.data.csv using import cvs
+col = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'type']    # we determine how to call what's in those iris.data.csv colums
+iris = pd.read_csv("iris.data.csv", names = col)    # here we read the dataset iris.data.csv
 
-#file.close() #we finish the operation
-
-# generated text file function
-
+# define function that will save the summary data txt file - Menu option 1
 def output_summary_txt():
-
-    # we determine how to call what's in those iris.data.csv colums
-    col = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'type']
-
-    # here we read the dataset iris.data.csv
-    iris = pd.read_csv("iris.data.csv", names = col) 
-
-    # create a new variable for each of iris types using groupby and get_group
-    grouped = iris.groupby(iris.type)          #https://www.geeksforgeeks.org/split-pandas-dataframe-by-rows/
+   # create a new variable for each of iris types using groupby and get_group
+    grouped = iris.groupby(iris.type)                       #https://www.geeksforgeeks.org/split-pandas-dataframe-by-rows/
     setosa = grouped.get_group('Iris-setosa')
     versicolor = grouped.get_group('Iris-versicolor')
     virginica = grouped.get_group('Iris-virginica')
@@ -45,21 +23,21 @@ def output_summary_txt():
     # open or create a new txt file
     f = open("summarydata.txt", "w")      #https://www.w3schools.com/python/python_file_write.asp
 
-    # Iris-setosa data to be writed in the summary text file
+    # Iris-setosa data to be written in the summary text file
     f.write('Iris-setosa' + '\n' + '======================' + '\n')
     f.write('Sepal Length MIN: ' + str(min(setosa.sepal_length)) + '\n' + 'Sepal Length MAX: ' + str(max(setosa.sepal_length)) + '\n' + 'Sepal Length AVG: ' + str(round(setosa.sepal_length.mean(), 2)) + '\n')
     f.write('Sepal Width MIN: ' + str(min(setosa.sepal_width)) + '\n' + 'Sepal Width MAX: ' + str(max(setosa.sepal_width)) + '\n' + 'Sepal Width AVG: ' + str(round(setosa.sepal_width.mean(), 2)) + '\n')
     f.write('Petal Length MIN: ' + str(min(setosa.petal_length)) + '\n' + 'Petal Length MAX: ' + str(max(setosa.petal_length)) + '\n' + 'Petal Length AVG: ' + str(round(setosa.petal_length.mean(), 2)) + '\n')
     f.write('Petal Width MIN: ' + str(min(setosa.petal_width)) + '\n' + 'Petal Width MAX: ' + str(max(setosa.petal_width)) + '\n' + 'Petal Width AVG: ' + str(round(setosa.petal_width.mean(), 2)) + '\n\n\n')
 
-    # Iris-versicolor data to be writed in the summary text file
+    # Iris-versicolor data to be written in the summary text file
     f.write('Iris-versicolor' + '\n' + '======================' + '\n')
     f.write('Sepal Length MIN: ' + str(min(versicolor.sepal_length)) + '\n' + 'Sepal Length MAX: ' + str(max(versicolor.sepal_length)) + '\n' + 'Sepal Length AVG: ' + str(round(versicolor.sepal_length.mean(), 2)) + '\n')
     f.write('Sepal Width MIN: ' + str(min(versicolor.sepal_width)) + '\n' + 'Sepal Width MAX: ' + str(max(versicolor.sepal_width)) + '\n' + 'Sepal Width AVG: ' + str(round(versicolor.sepal_width.mean(), 2)) + '\n')
     f.write('Petal Length MIN: ' + str(min(versicolor.petal_length)) + '\n' + 'Petal Length MAX: ' + str(max(versicolor.petal_length)) + '\n' + 'Petal Length AVG: ' + str(round(versicolor.petal_length.mean(), 2)) + '\n')
     f.write('Petal Width MIN: ' + str(min(versicolor.petal_width)) + '\n' + 'Petal Width MAX: ' + str(max(versicolor.petal_width)) + '\n' + 'Petal Width AVG: ' + str(round(versicolor.petal_width.mean(), 2)) + '\n\n\n')
     
-    # Iris-virginica data to be writed in the summary text file
+    # Iris-virginica data to be written in the summary text file
     f.write('Iris-virginica' + '\n' + '======================' + '\n')
     f.write('Sepal Length MIN: ' + str(min(virginica.sepal_length)) + '\n' + 'Sepal Length MAX: ' + str(max(virginica.sepal_length)) + '\n' + 'Sepal Length AVG: ' + str(round(virginica.sepal_length.mean(), 2)) + '\n')
     f.write('Sepal Width MIN: ' + str(min(virginica.sepal_width)) + '\n' + 'Sepal Width MAX: ' + str(max(virginica.sepal_width)) + '\n' + 'Sepal Width AVG: ' + str(round(virginica.sepal_width.mean(), 2)) + '\n')
@@ -123,7 +101,7 @@ def scatter_plot():
     plt.scatter(virginica.petal_length, virginica.petal_width, c ="grey", linewidths = 1, marker ="s", edgecolor ="blue", s = 50)
 
 #Using pyplot to create visualizations
- plt.xlabel("Length")
+    plt.xlabel("Length")
     plt.ylabel("Width")
     plt.show()
 
@@ -138,72 +116,22 @@ def menu():
 menu() #we print the menu here
 option = int(input("Enter your preference: ")) #getting the input from user
 
-while option > 0:
+while option > 0: #using 'while elif' to generate what our user wants displayed from our menu
     if option == 1:
-        #enter option 1 what's on the menu
-        output_summary_txt()
-        pass
+        #entered the option '1' on the menu
+        output_summary_txt() #save the summary text file (summarydata.txt)
     elif option == 2:
         #enter option 2 that's in the menu
-        output_histogram()
+        output_histogram() #save histogram png 
     elif option == 3:
         #enter option 3 that's in the menu
-        print 
+        scatter_plot() #scatter plot
+    elif option == 4: #the other analysis will be completed if is still time
+        print ('in development')
+    elif option == 5: 
+        print('Thank you for using this programm. Bye, Bye') #if the user inserts '5' this message will be displayed
     else:
-        print('Invalid input')
-    print() #we are doing an empty print here
+        print('Invalid input') #any other input except for the ones above, will display the message 'invalid input'
+    print() #we are doing an empty print here and ask again for an option
     menu()
     option = int(input("Enter your preference: "))
-
-print("Thank you for using this program. Bye, Bye!")
-
-
-
-
-#menu = {} #we are creating a menu
-#menu['1']="See the summary of each variable" #inserting options point by point
-#menu['2']="See petal lenght histogram"
-#menu['3']="See petal width histogram"
-#menu['4']="See sepal lenght histogram"
-#menu['5']="See sepal width histogram"
-#menu['6']="See optional histogram"
-#menu['7']="See optional 1 histogram"
-#menu['8']="Exit"
-
-
-
-
-col=['sepal_length','sepal_width','petal_length','petal_width','type'] #col= colums; and we determine how to call what's in those colums 
-iris=pd.read_csv("iris.data.csv",names=col) #here we read the dataset iris.data.csv, 
-
-
-
-#here we are dividing in 3 parts the class data set
-iris_setosa=iris.loc[iris["type"]=="Iris-setosa"] #
-iris_virginica=iris.loc[iris["type"]=="Iris-virginica"] #
-iris_versicolor=iris.loc[iris["type"]=="Iris-versicolor"] #
-
-
-    
-
-#Scatter plot output
-# creating random data through randomint
-# function of numpy.random
-np.random.seed(42)
- 
-random_x= np.random.randint(1,101,100)
-random_y= np.random.randint(1,101,100)
- 
-plot = px.Figure(data=[px.Scatter(
-    x = random_x,
-    y = random_y,
-    mode = 'markers',)
-])
-                  
-plot.show()
-
-
-#Violin plot output
-
-
-#Bloxplot output
