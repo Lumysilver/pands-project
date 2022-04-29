@@ -108,7 +108,9 @@ def scatter_plot():
     #https://www.geeksforgeeks.org/matplotlib-pyplot-scatter-in-python/
     #https://matplotlib.org/3.5.0/api/_as_gen/matplotlib.pyplot.scatter.html
 
-
+ # iris setosa sepal and petal scatter plot
+    plt.scatter(setosa.sepal_length, setosa.sepal_width, c ="grey", linewidths = 1, marker ="o", edgecolor ="green", s = 50)
+    plt.scatter(setosa.petal_length, setosa.petal_width, c ="grey", linewidths = 1, marker ="s", edgecolor ="green", s = 50)
 
 
 
