@@ -1,1 +1,48 @@
-{'Summary Data': 'TotalAmount'}
+Iris-setosa
+======================
+Sepal Length MIN: 4.3
+Sepal Length MAX: 5.8
+Sepal Length AVG: 5.01
+Sepal Width MIN: 2.3
+Sepal Width MAX: 4.4
+Sepal Width AVG: 3.42
+Petal Length MIN: 1.0
+Petal Length MAX: 1.9
+Petal Length AVG: 1.46
+Petal Width MIN: 0.1
+Petal Width MAX: 0.6
+Petal Width AVG: 0.24
+
+
+Iris-versicolor
+======================
+Sepal Length MIN: 4.9
+Sepal Length MAX: 7.0
+Sepal Length AVG: 5.94
+Sepal Width MIN: 2.0
+Sepal Width MAX: 3.4
+Sepal Width AVG: 2.77
+Petal Length MIN: 3.0
+Petal Length MAX: 5.1
+Petal Length AVG: 4.26
+Petal Width MIN: 1.0
+Petal Width MAX: 1.8
+Petal Width AVG: 1.33
+
+
+Iris-virginica
+======================
+Sepal Length MIN: 4.9
+Sepal Length MAX: 7.9
+Sepal Length AVG: 6.59
+Sepal Width MIN: 2.2
+Sepal Width MAX: 3.8
+Sepal Width AVG: 2.97
+Petal Length MIN: 4.5
+Petal Length MAX: 6.9
+Petal Length AVG: 5.55
+Petal Width MIN: 1.4
+Petal Width MAX: 2.5
+Petal Width AVG: 2.03
+
+
