@@ -136,11 +136,11 @@ def menu():
     print("[5] Exit the program")
 
 menu() #we print the menu here
-option = int(input("Enter your preference: ")) #I am getting the options from user
+option = int(input("Enter your preference: ")) #getting the input from user
 
-while option != 0:
+while option > 0:
     if option == 1:
-        #enter option 1 thats in the menu
+        #enter option 1 what's on the menu
         output_summary_txt()
         pass
     elif option == 2:
