@@ -99,7 +99,14 @@ def output_histogram():
 ## define function that will generate the scatter plot - Menu option 3
 def scatter_plot():
 
- 
+   # create a new variable for each of iris types using groupby and get_group
+    grouped = iris.groupby(iris.type)                       #https://www.geeksforgeeks.org/split-pandas-dataframe-by-rows/
+    setosa = grouped.get_group('Iris-setosa')
+    versicolor = grouped.get_group('Iris-versicolor')
+    virginica = grouped.get_group('Iris-virginica')
+
+    #https://www.geeksforgeeks.org/matplotlib-pyplot-scatter-in-python/
+    #https://matplotlib.org/3.5.0/api/_as_gen/matplotlib.pyplot.scatter.html
 
 
 
