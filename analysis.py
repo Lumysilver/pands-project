@@ -127,6 +127,7 @@ def scatter_plot():
     plt.ylabel("Width")
     plt.show()
 
+# define the user menu function and options
 def menu(): 
     print("[1] Save the summary data text")
     print("[2] Save histograms to png files")
