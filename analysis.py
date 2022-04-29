@@ -122,7 +122,10 @@ def scatter_plot():
     plt.scatter(virginica.sepal_length, virginica.sepal_width, c ="grey", linewidths = 1, marker ="o", edgecolor ="blue", s = 50)
     plt.scatter(virginica.petal_length, virginica.petal_width, c ="grey", linewidths = 1, marker ="s", edgecolor ="blue", s = 50)
 
-
+#Using pyplot to create visualizations
+ plt.xlabel("Length")
+    plt.ylabel("Width")
+    plt.show()
 
 def menu(): 
     print("[1] Save the summary data text")
