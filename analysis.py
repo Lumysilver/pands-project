@@ -118,7 +118,9 @@ def scatter_plot():
     plt.scatter(versicolor.petal_length, versicolor.petal_width, c ="grey", linewidths = 1, marker ="s", edgecolor ="red", s = 50)
 
 
-
+# iris virginica sepal and petal scatter plot
+    plt.scatter(virginica.sepal_length, virginica.sepal_width, c ="grey", linewidths = 1, marker ="o", edgecolor ="blue", s = 50)
+    plt.scatter(virginica.petal_length, virginica.petal_width, c ="grey", linewidths = 1, marker ="s", edgecolor ="blue", s = 50)
 
 
 
