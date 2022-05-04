@@ -7,7 +7,6 @@ import pandas as pd #we import pandas library because we are going to work on ou
 import matplotlib.pyplot as plt #matplotlib makes plots/low level graphs
 import seaborn as sns #seaborn is a Matplotlib-based data visualization package, I use seaborn library to make colourfull graphs
 
-
 # we are going to load the data we have called iris.data.csv using import cvs
 col = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'type']    # we determine how to call what's in those iris.data.csv colums
 iris = pd.read_csv("iris.data.csv", names = col)    # here we read the dataset iris.data.csv
@@ -46,7 +45,6 @@ def output_summary_txt():
     
     # close the file
     f.close()
-
 
 
 #Menu option 2
@@ -89,12 +87,12 @@ def scatter_plot():
  # iris setosa sepal and petal scatter plot
     plt.scatter(setosa.sepal_length, setosa.sepal_width, c ="grey", linewidths = 1, marker ="o", edgecolor ="green", s = 50)
     plt.scatter(setosa.petal_length, setosa.petal_width, c ="grey", linewidths = 1, marker ="s", edgecolor ="green", s = 50)
-
+    plt.legend(["Setosa Sepal Lenght", "Setosa Sepal Width"])
+    
 
 # iris versicolor sepal and petal scatter plot
     plt.scatter(versicolor.sepal_length, versicolor.sepal_width, c ="grey", linewidths = 1, marker ="o", edgecolor ="red", s = 50)
     plt.scatter(versicolor.petal_length, versicolor.petal_width, c ="grey", linewidths = 1, marker ="s", edgecolor ="red", s = 50)
-
 
 # iris virginica sepal and petal scatter plot
     plt.scatter(virginica.sepal_length, virginica.sepal_width, c ="grey", linewidths = 1, marker ="o", edgecolor ="blue", s = 50)
@@ -103,7 +101,9 @@ def scatter_plot():
 #Using pyplot to create visualizations
     plt.xlabel("Length")
     plt.ylabel("Width")
+    plt.legend(loc='best')
     plt.show()
+    plt.close
 
 # define the user menu function and options
 def menu(): 
@@ -132,6 +132,6 @@ while option > 0: #using 'while elif' to generate what our user wants displayed 
         print('Thank you for using this programm. Bye, Bye') #if the user inserts '5' this message will be displayed
     else:
         print('Invalid input') #any other input except for the ones above, will display the message 'invalid input'
-    print() #we are doing an empty print here and ask again for an option
-    menu()
-    option = int(input("Enter your preference: "))
+        print() #we are doing an empty print here and ask again for an option
+        menu()
+        option = int(input("Enter your preference: "))
