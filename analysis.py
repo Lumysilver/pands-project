@@ -86,19 +86,10 @@ def scatter_plot():
     #https://www.geeksforgeeks.org/matplotlib-pyplot-scatter-in-python/
     #https://matplotlib.org/3.5.0/api/_as_gen/matplotlib.pyplot.scatter.html
 
- # iris setosa sepal and petal scatter plot
+    #iris setosa sepal and petal scatter plot
     plt.scatter(setosa.sepal_length, setosa.sepal_width, c ="grey", linewidths = 1, marker ="o", edgecolor ="green", s = 50)
     plt.scatter(setosa.petal_length, setosa.petal_width, c ="grey", linewidths = 1, marker ="s", edgecolor ="green", s = 50)
-  #  x = np.linspace(1, s, 50)  #https://itsmycode.com/no-handles-with-labels-found-to-put-in-legend/
-  #  y1 = np.sin(x)
-  #  plt.plot(1,50)
-  #  plt.plot(x, y1, '-b')
-  #  plt.legend(['Setosa petal lenght', 'Setosa petal width'])
- #   plt.show()
-   # plt.close()
-    
-    
-
+  
     #iris versicolor sepal and petal scatter plot
     plt.scatter(versicolor.sepal_length, versicolor.sepal_width, c ="grey", linewidths = 1, marker ="o", edgecolor ="red", s = 50)
     plt.scatter(versicolor.petal_length, versicolor.petal_width, c ="grey", linewidths = 1, marker ="s", edgecolor ="red", s = 50)
@@ -107,18 +98,18 @@ def scatter_plot():
     plt.scatter(virginica.sepal_length, virginica.sepal_width, c ="grey", linewidths = 1, marker ="o", edgecolor ="blue", s = 50)
     plt.scatter(virginica.petal_length, virginica.petal_width, c ="grey", linewidths = 1, marker ="s", edgecolor ="blue", s = 50)
 
-#Using pyplot to create visualizations
-  #  plt.legend()
+    #Using pyplot to create visualizations
+    #plt.legend()
     
-    
-    plt.legend(("Setosa sepal", "Setosa petal", "Veriscolor ", "", "sdfsdfsdf", "ff"), loc="upper left", title="Sizes")
+    #legend source: https://itsmycode.com/no-handles-with-labels-found-to-put-in-legend/
+    plt.legend(("Setosa sepal", "Setosa petal", "Veriscolor sepal", "Veriscolor Petal", "Virginica sepal", "Virginica petal"), loc="upper left", title="Sizes")
 
     plt.xlabel("Length")
     plt.ylabel("Width")
     plt.show()
     plt.close(plt.scatter)
 
-# define the user menu function and options
+    #define the user menu function and options
 def menu(): 
     print("[1] Save the summary data text")
     print("[2] Save histograms to png files")
