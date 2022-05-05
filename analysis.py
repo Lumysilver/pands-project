@@ -72,6 +72,7 @@ def output_histogram():
     plt.savefig("sepal_width.png")#we save as png the histogram
 
     plt.show() #function used to show all open figures
+    plt.close(sns.FacetGrid) 
 
 
 ## define function that will generate the scatter plot - Menu option 3
@@ -102,19 +103,27 @@ def scatter_plot():
     #plt.legend()
     
     #legend source: https://itsmycode.com/no-handles-with-labels-found-to-put-in-legend/
+                    #https://matplotlib.org/3.5.0/gallery/lines_bars_and_markers/scatter_with_legend.html
     plt.legend(("Setosa sepal", "Setosa petal", "Veriscolor sepal", "Veriscolor Petal", "Virginica sepal", "Virginica petal"), loc="upper left", title="Sizes")
 
     plt.xlabel("Length")
     plt.ylabel("Width")
     plt.show()
-    plt.close(plt.scatter)
+    plt.close(plt.figure)
+
+#Violin plot is usualy used to observe the density of data
+#https://medium.com/@rishav.jnit/exploratory-data-analysis-eda-on-iris-dataset-using-python-cadd850c1fc6
+def violin_plot(): 
+    sns.violinplot(x='species', y= 'petal_length', data=iris, size=10)
+    plt.show()
+    plt.close()
 
     #define the user menu function and options
 def menu(): 
     print("[1] Save the summary data text")
     print("[2] Save histograms to png files")
     print("[3] Save scatter plot of variables")
-    print("[4] Other analysis")
+    print("[4] Save Violin Plot")
     print("[5] Exit the program")
 
 menu() #we print the menu here
@@ -131,7 +140,7 @@ while option > 0: #using 'while elif' to generate what our user wants displayed 
         #enter option 3 that's in the menu
         scatter_plot() #scatter plot
     elif option == 4: #the other analysis will be completed if is still time
-        print ('in development')
+        violin_plot()#violin plot
     elif option == 5: 
         print('Thank you for using this programm. Bye, Bye') #if the user inserts '5' this message will be displayed
     else:
