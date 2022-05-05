@@ -3,7 +3,9 @@
 #Research what data libraries will help me achieve the results I want; 
 
 #importing libraries
+from attr import s
 import pandas as pd #we import pandas library because we are going to work on our scatter plot
+import numpy as np
 import matplotlib.pyplot as plt #matplotlib makes plots/low level graphs
 import seaborn as sns #seaborn is a Matplotlib-based data visualization package, I use seaborn library to make colourfull graphs
 
@@ -87,23 +89,34 @@ def scatter_plot():
  # iris setosa sepal and petal scatter plot
     plt.scatter(setosa.sepal_length, setosa.sepal_width, c ="grey", linewidths = 1, marker ="o", edgecolor ="green", s = 50)
     plt.scatter(setosa.petal_length, setosa.petal_width, c ="grey", linewidths = 1, marker ="s", edgecolor ="green", s = 50)
-    plt.legend(["Setosa Sepal Lenght", "Setosa Sepal Width"])
+  #  x = np.linspace(1, s, 50)  #https://itsmycode.com/no-handles-with-labels-found-to-put-in-legend/
+  #  y1 = np.sin(x)
+  #  plt.plot(1,50)
+  #  plt.plot(x, y1, '-b')
+  #  plt.legend(['Setosa petal lenght', 'Setosa petal width'])
+ #   plt.show()
+   # plt.close()
+    
     
 
-# iris versicolor sepal and petal scatter plot
+    #iris versicolor sepal and petal scatter plot
     plt.scatter(versicolor.sepal_length, versicolor.sepal_width, c ="grey", linewidths = 1, marker ="o", edgecolor ="red", s = 50)
     plt.scatter(versicolor.petal_length, versicolor.petal_width, c ="grey", linewidths = 1, marker ="s", edgecolor ="red", s = 50)
 
-# iris virginica sepal and petal scatter plot
+    #iris virginica sepal and petal scatter plot
     plt.scatter(virginica.sepal_length, virginica.sepal_width, c ="grey", linewidths = 1, marker ="o", edgecolor ="blue", s = 50)
     plt.scatter(virginica.petal_length, virginica.petal_width, c ="grey", linewidths = 1, marker ="s", edgecolor ="blue", s = 50)
 
 #Using pyplot to create visualizations
+  #  plt.legend()
+    
+    
+    plt.legend(("Setosa sepal", "Setosa petal", "Veriscolor ", "", "sdfsdfsdf", "ff"), loc="upper left", title="Sizes")
+
     plt.xlabel("Length")
     plt.ylabel("Width")
-    plt.legend(loc='best')
     plt.show()
-    plt.close
+    plt.close(plt.scatter)
 
 # define the user menu function and options
 def menu(): 
